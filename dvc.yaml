@@ -1,8 +1,4 @@
 stages:
-    get_data:
-        cmd: dvc pull data_processed.csv
-        outs:
-            - data_processed.csv
     train:
         cmd: python train.py
         deps:
