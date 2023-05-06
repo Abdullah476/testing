@@ -8,9 +8,7 @@ jobs:
             - uses: actions/checkout@v2
             - name: Running_updates
               env:
-                  GH_TOKEN: ${{ github.token }}
                   GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
-                  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
               run: |
                   make install 
                   dvc pull data_processed.csv
