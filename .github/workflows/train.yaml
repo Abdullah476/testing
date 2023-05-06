@@ -9,6 +9,7 @@ jobs:
             - name: Running_updates
               env:
                   GH_TOKEN: ${{ github.token }}
+                  GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
                   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
               run: |
                   make install 
